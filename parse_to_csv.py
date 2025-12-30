@@ -21,7 +21,7 @@ date_regiuni_excluse = {
     "Small states", "South Asia", "South Asia (IDA & IBRD)", 
     "Sub-Saharan Africa", "Sub-Saharan Africa (IDA & IBRD countries)", 
     "Sub-Saharan Africa (excluding high income)", "Upper middle income", "World", 
-    "Euro area", "European Union", "High income", "Post-demographic dividend"
+    "Euro area", "European Union", "High income", "Post-demographic dividend","Caribbean small states"
 }
 an_pentru_analiza = "2015"
 
