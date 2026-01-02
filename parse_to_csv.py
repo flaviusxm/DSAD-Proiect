@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 
-director_date_excel = r'd:\DSAD-Proiect\pre-cleaning-data'
+director_date_excel = os.path.join('.', 'pre-cleaning-data')
 fisiere_variabila_x = [os.path.join(director_date_excel, 'indicatori educatie X', f) for f in ['cheltuieli_guvern_educatie.xls', 'inscrieri_invatamant_tertiar.xls', 'inscrieri_invatamant_secundar.xls']]
 fisiere_variabila_y = [os.path.join(director_date_excel, 'indicatori sanatate Y', f) for f in ['cheltuieli_curente_pentru_sanatate.xls', 'rata_mortalitatii_infantile.xls', 'speranta_de_viata_la_nastere.xls']]
 
@@ -67,7 +67,7 @@ df_final = pd.merge(df_variabila_x, df_variabila_y, on='Country Name', sort=True
 coloane_pentru_rotunjit = df_final.columns.difference(['Country Name'])
 df_final[coloane_pentru_rotunjit] = df_final[coloane_pentru_rotunjit].round(2)
 
-cale_salvare = r'd:\DSAD-Proiect\csv-cleaned-data\date_finale.csv'
+cale_salvare = os.path.join('.', 'csv-cleaned-data', 'date_finale.csv')
 df_final.to_csv(cale_salvare, index=False)
 
 
